@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Cache directories
+.cache/
+**/.cache/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
