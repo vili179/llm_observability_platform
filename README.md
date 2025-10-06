@@ -60,7 +60,6 @@ I chose the MERN stack for its scalability and flexibility. It offers cross-plat
 * Extensible data model
 * Simple deployment
 
----
 
 ## Step-by-Step Local Setup
 
