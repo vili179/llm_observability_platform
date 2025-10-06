@@ -147,6 +147,32 @@ Check if server is running
 
 ---
 
+## Testing
+
+### Running Tests
+```bash
+# Run all tests
+npm test
+
+# Run unit tests only
+npx jest tests/unit/
+
+# Run integration tests only  
+npx jest tests/integration/
+```
+
+### Test Coverage
+- Gemini Service unit tests
+- API health check integration tests
+
+### Current Test Status
+```bash
+Test Suites: 2 passed, 2 total
+Tests:       4 passed, 4 total
+```
+
+---
+
 ### System Evolution
 
 To handle a high number of requests, I would use batch processing and smart queueing. This would keep the system smooth by grouping similar requests and handling important ones first.
