@@ -106,7 +106,6 @@ npm start
 lsof -ti:8888 | xargs kill -9
 ```
 
----
 
 ## API Documentation
 
@@ -145,8 +144,6 @@ Check if server is running
 }
 ```
 
----
-
 ## Testing
 
 ### Running Tests
@@ -171,9 +168,7 @@ Test Suites: 2 passed, 2 total
 Tests:       4 passed, 4 total
 ```
 
----
-
-### System Evolution
+## System Evolution
 
 To handle a high number of requests, I would use batch processing and smart queueing. This would keep the system smooth by grouping similar requests and handling important ones first.
 In the future, I would add user profiles with personalized dashboards so users can save their favorite models or metrics. The platform could also include a plugin system that lets users add their own tools for analysis or monitoring. It could even provide personalized tips based on past data to help users write better prompts and choose the best models.
