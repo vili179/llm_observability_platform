@@ -98,6 +98,14 @@ npm start
 
 **Access the dashboard:** [http://localhost:3000](http://localhost:3000)
 
+## Troubleshooting
+
+### Port 8888 already in use
+```bash
+# Find and kill process using port 8888
+lsof -ti:8888 | xargs kill -9
+```
+
 ---
 
 ## API Documentation
