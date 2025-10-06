@@ -19,6 +19,23 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+app.get('/api/stats', async (req, res) => {
+  try {
+    const LLMCall = require('./models/LLMCall');
+    const llmCall = new LLMCall();
+    const calls = await llmCall.getAll();
+    
+    const total = calls.length;
+    const avgLatency = total > 0 
+      ? Math.round(calls.reduce((sum, call) => sum + call.latency, 0) / total)
+      : 0;
+    
+    res.json({ total, avgLatency });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.post('/api/generate', async (req, res) => {
   try {
     const { prompt, model = 'gemini-2.0-flash-001' } = req.body;
@@ -31,14 +48,14 @@ app.post('/api/generate', async (req, res) => {
 
     const LLMCall = require('./models/LLMCall');
     const llmCall = new LLMCall();
+
     await llmCall.create({
       prompt,
       response: result.response,
       model: result.model,
+      latency: result.latency,
       parameters: { model },
       metadata: {
-        latency: result.latency,
-        status: result.status
       }
     });
     
