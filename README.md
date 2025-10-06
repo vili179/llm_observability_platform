@@ -105,6 +105,8 @@ npm start
 lsof -ti:8888 | xargs kill -9
 ```
 
+## Project Screenshot
+![LLM Observability Platform](https://github.com/user-attachments/assets/d2ccefa7-0dba-4e5f-a908-a19c07911715)
 
 ## API Documentation
 
