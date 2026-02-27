@@ -13,3 +13,7 @@ node_modules/
 # OS files
 .DS_Store
 .env.docker
+.env
+.env.docker
+*.env
+*.env.*
